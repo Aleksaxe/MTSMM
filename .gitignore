@@ -3,3 +3,4 @@
 *.class
 *.jar
 *.war
+.idea/workspace.xml
