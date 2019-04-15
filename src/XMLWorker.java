@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class XMLWorker {
     static private double overrun = 0;
@@ -92,9 +94,16 @@ public class XMLWorker {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
-        parser.parse(new File("e:\\!distrib\\1.xml"), handler);
-        System.out.println(numbers.size());
-        System.out.println(overruns.toString());
+        parser.parse(new File("D:\\2.xml"), handler);
+        HashMap map=new HashMap();
+        for (int i = 0; i <numbers.size() ; i++) {
+            double d=overruns.get(i);
+            if (d!=0.0)map.put(numbers.get(i),overruns.get(i));
+
+        }
+
+        System.out.println(map);
+
 
     }
 
