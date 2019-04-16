@@ -1,6 +1,7 @@
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+
 import javax.xml.parsers.*;
 import java.io.File;
 import java.io.IOException;
@@ -14,14 +15,6 @@ class XMLWorker {
     private double overrun = 0;
     private ArrayList<String> numbers = new ArrayList<>();
     private ArrayList<Double> overruns = new ArrayList<>();
-
-    private ArrayList<String> getNumber() {
-        return numbers;
-    }
-
-     //private XMLWorker() {
-   //     parse();
-   // }
 
     private void setNumber(Attributes attributes) {
 
@@ -100,7 +93,7 @@ class XMLWorker {
         }
     }
 
-    HashMap<String,Double> parse(String path) {
+    HashMap parse(String path) {
         try {
             parser.parse(new File(path), handler);
         } catch (SAXException | IOException e) {
@@ -113,9 +106,8 @@ class XMLWorker {
 
         }
 
-       return map;
+        return map;
     }
-
 
 
 }

@@ -1,17 +1,22 @@
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Properties;
 
 public class Tester {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Properties properties = new Properties();
+        properties.load(new FileReader(new File("D:\\Books\\MTS\\1.property")));
+        XMLWorker xmlWorker = new XMLWorker();
+        HashMap over = xmlWorker.parse("D:\\Books\\MTS\\1.xml");
 
-        XMLWorker xmlWorker=new XMLWorker();
-        HashMap<String,Double> over= xmlWorker.parse("D:\\Books\\MTS\\1.xml");
-        for (Map.Entry entry:over.entrySet()
-             ) {
-            emailSender.send("a.aksenov@multi-menu.net","Rjvcjvjk0","a.aksenov@multi-menu.com"
-            ,entry.getKey().toString(), Double.parseDouble(entry.getValue().toString()));
-        }
+        over.forEach((key, value) -> {
+            String email = properties.getProperty((String) key) + "@multi-menu.com";
+            emailSender.send("support@multi-menu.net", "Vfhcbfybyyfkeyt18", email
+                    , (String) key, Double.parseDouble(value.toString()));
+        });
 
     }
 }
