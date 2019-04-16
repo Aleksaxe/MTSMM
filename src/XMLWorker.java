@@ -19,7 +19,7 @@ class XMLWorker {
         return numbers;
     }
 
-    public XMLWorker() {
+     private XMLWorker() {
         parse();
     }
 
@@ -75,10 +75,6 @@ class XMLWorker {
                     if (attributes.getValue(i).equalsIgnoreCase("телефонные услуги")
                             && !attributes.getValue(i).equalsIgnoreCase("0")) {
                         addOverrun(attributes);
-
-                    } else if (attributes.getValue(i).equalsIgnoreCase("блокировки")
-                            && !attributes.getValue(i).equalsIgnoreCase("0")) {
-                        addOverrun(attributes);
                     } else if (attributes.getValue(i).equalsIgnoreCase("разовые услуги")
                             && !attributes.getValue(i).equalsIgnoreCase("0")) {
                         addOverrun(attributes);
@@ -104,7 +100,7 @@ class XMLWorker {
         }
     }
 
-    void parse() {
+    HashMap parse() {
         try {
             parser.parse(new File("D:\\2.xml"), handler);
         } catch (SAXException | IOException e) {
@@ -117,7 +113,7 @@ class XMLWorker {
 
         }
 
-        System.out.println(map);
+       return map;
     }
 
     public static void main(String[] args) {
