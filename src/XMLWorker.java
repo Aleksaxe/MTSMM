@@ -19,9 +19,9 @@ class XMLWorker {
         return numbers;
     }
 
-     private XMLWorker() {
-        parse();
-    }
+     //private XMLWorker() {
+   //     parse();
+   // }
 
     private void setNumber(Attributes attributes) {
 
@@ -100,9 +100,9 @@ class XMLWorker {
         }
     }
 
-    HashMap parse() {
+    HashMap<String,Double> parse(String path) {
         try {
-            parser.parse(new File("D:\\2.xml"), handler);
+            parser.parse(new File(path), handler);
         } catch (SAXException | IOException e) {
             e.printStackTrace();
         }
@@ -116,9 +116,7 @@ class XMLWorker {
        return map;
     }
 
-    public static void main(String[] args) {
-        XMLWorker xmlWorker=new XMLWorker();
-    }
+
 
 }
 

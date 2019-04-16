@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="897b5490-ff21-4b80-aba8-b73c78056d3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MTSMM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MTSMM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XMLWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emailSender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,21 +19,17 @@
       <file leaf-file-name="XMLWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/XMLWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#3436#3437#0" expanded="true" />
-                <element signature="e#3487#3488#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="113">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emailSender.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="emailSender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/emailSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="14" />
+            <state relative-caret-position="198">
+              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#597#828#0" expanded="true" />
@@ -49,11 +39,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="147">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,10 +238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
           <caret line="104" column="5" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <element signature="e#3436#3437#0" expanded="true" />
-            <element signature="e#3487#3488#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -256,35 +245,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XMLWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="113">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding>
-            <element signature="e#3436#3437#0" expanded="true" />
-            <element signature="e#3487#3488#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#597#828#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emailSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="14" />
+        <state relative-caret-position="147">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#597#828#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
           </folding>
         </state>
       </provider>

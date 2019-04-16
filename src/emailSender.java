@@ -5,7 +5,7 @@ import java.util.Properties;
 
 class emailSender {
 
-    static void send(String email, String password, String addressee) {
+    static void send(String email, String password, String addressee, String numberWithOverrun, double overrun) {
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.yandex.ru");
@@ -26,9 +26,23 @@ class emailSender {
             message.setFrom(new InternetAddress(email));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(addressee));
-            message.setSubject("Test message");
+            message.setSubject("Перерасход за услуги связи МТС");
 
-            message.setText("Test message");
+            message.setText("Уважаемые коллеги!\n" +
+                    "Информирую Вас о допущенном Вами перерасходе лимита сотовой связи по номеру "
+                    + numberWithOverrun + " на сумму " +
+                    +overrun + " р.\n" +
+                    "\n" +
+                    "До 5 числа текущего месяца" +
+                    ". Вам необходимо:\n" +
+                    " \n" +
+                    "Сформировать Служебную записку, объясняющую данный перерасход " +
+                    "(бланк можно найти по следующему пути : Shared\\Общая\\Документы IT)" +
+                    " и согласовать её с Финансовым директором, Тверских Р.В.\n" +
+                    "Направить, согласованную Служебную записку Руководителю расчетной группы Елене Мамичевой.\n" +
+                    "\n" +
+                    "В противном случае, допущенный Вами перерасход будет удержан из Вашей заработной платы.");
+
 
             Transport.send(message);
 
