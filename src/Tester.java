@@ -14,7 +14,7 @@ public class Tester {
 
         over.forEach((key, value) -> {
             String email = properties.getProperty((String) key) + "@multi-menu.com";
-            emailSender.send("support@multi-menu.net", "Vfhcbfybyyfkeyt18", email
+            emailSender.send("", "", email
                     , (String) key, Double.parseDouble(value.toString()));
         });
 
