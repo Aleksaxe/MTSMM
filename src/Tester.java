@@ -1,22 +1,29 @@
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Properties;
+
 
 public class Tester {
 
     public static void main(String[] args) throws IOException {
-        Properties properties = new Properties();
-        properties.load(new FileReader(new File("D:\\Books\\MTS\\1.property")));
-        XMLWorker xmlWorker = new XMLWorker();
-        HashMap over = xmlWorker.parse("D:\\Books\\MTS\\1.xml");
 
-        over.forEach((key, value) -> {
-            String email = properties.getProperty((String) key) + "@multi-menu.com";
-            emailSender.send("", "", email
-                    , (String) key, Double.parseDouble(value.toString()));
-        });
+        outFile outFile=new outFile();
+        XMLWorker xmlWorker;
+        HashMap over = new HashMap();
+        File folder = new File("D:\\Books\\MTS\\fileTreeTest2");
+        File[] listOfFiles = folder.listFiles();
+        assert listOfFiles != null;
+        for (File file : listOfFiles) {
+            if (file.isFile()) {
+                xmlWorker = new XMLWorker();
+                over = xmlWorker.parse(file.getPath());
+            }outFile.write(over);
+        }
+        emailSender.send("D:\\Books\\MTS\\1.property",over);
+
+
+
+
 
     }
 }

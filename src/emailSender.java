@@ -1,11 +1,15 @@
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Properties;
 
 class emailSender {
 
-    static void send(String email, String password, String addressee, String numberWithOverrun, double overrun) {
+    private static void messegePreparation(String email, String password, String addressee, String numberWithOverrun, double overrun) {
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.yandex.ru");
@@ -50,5 +54,18 @@ class emailSender {
             throw new RuntimeException(e);
         }
     }
+   static void send(String propMail,HashMap over) throws IOException {
+        Properties properties = new Properties();
+        properties.load(new FileReader(new File(propMail)));
+        /*
+         * foreach по карте over для отправки мейлов
+         * */
+        over.forEach((key, value) -> {
+            String email = properties.getProperty((String) key) + "@multi-menu.com";
+            emailSender.messegePreparation("support@multi-menu.net", "Vfhcbfybyyfkeyt18", email
+                    , (String) key, Double.parseDouble(value.toString()));
+        });
+    }
+
 }
 
