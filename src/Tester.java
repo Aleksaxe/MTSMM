@@ -10,7 +10,9 @@ public class Tester {
         outFile outFile=new outFile();
         XMLWorker xmlWorker;
         HashMap over = new HashMap();
-        File folder = new File("D:\\Books\\MTS\\fileTreeTest2");
+
+        //Временный вариант забор файлов из указанной директории
+        File folder = new File("E:\\!distrib\\git\\MTS\\fileTreeTest2");
         File[] listOfFiles = folder.listFiles();
         assert listOfFiles != null;
         for (File file : listOfFiles) {
@@ -19,7 +21,7 @@ public class Tester {
                 over = xmlWorker.parse(file.getPath());
             }outFile.write(over);
         }
-        emailSender.send("D:\\Books\\MTS\\1.property",over);
+        emailSender.send("E:\\!distrib\\git\\MTS\\1.property",over);
 
 
 
