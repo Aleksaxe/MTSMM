@@ -8,7 +8,7 @@ import java.util.HashMap;
 
      void write(HashMap over) throws IOException {
         //запись в файл
-        File outover=new File("E:\\!distrib\\git\\MTS\test.txt");
+        File outover=new File("E:\\!distrib\\git\\MTS\\test.txt");
         FileWriter writer=new FileWriter(outover,true);
 
         over.forEach((Pkey,Pvalue)->{
