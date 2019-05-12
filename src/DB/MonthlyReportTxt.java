@@ -7,10 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
 
-class OutFile {
+class MonthlyReportTxt {
 
 
     void write(ResultSet resultSet) throws IOException, SQLException {
@@ -18,6 +17,9 @@ class OutFile {
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMMYYYY", Locale.ENGLISH);
         File monthlyReportTxt=new File("E:\\!distrib\\git\\MTS\\"+dateFormat.format(currentDate)+".txt");
+        if (monthlyReportTxt.exists()){
+            monthlyReportTxt.delete();
+        }
         monthlyReportTxt.createNewFile();
         //----------------------------------------------
         FileWriter writer = new FileWriter(monthlyReportTxt);

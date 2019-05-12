@@ -1,3 +1,5 @@
+package XML;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -11,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-class XMLWorker {
+public class XMLWorker {
     private double overrun = 0;
     private ArrayList<String> numbers = new ArrayList<>();
     private ArrayList<Double> overruns = new ArrayList<>();
@@ -93,7 +95,7 @@ class XMLWorker {
         }
     }
 
-    HashMap parse(String path) {
+    public HashMap parse(String path) {
         try {
             parser.parse(new File(path), handler);
         } catch (SAXException | IOException e) {

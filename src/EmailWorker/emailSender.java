@@ -1,3 +1,5 @@
+package EmailWorker;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 
-class emailSender {
+public class emailSender {
 
     private static void messegePreparation(String email, String password, String addressee, String numberWithOverrun, double overrun) {
 
@@ -54,7 +56,7 @@ class emailSender {
             throw new RuntimeException(e);
         }
     }
-   static void send(String propMail,HashMap over) throws IOException {
+   public static void send(String propMail, HashMap over) throws IOException {
         Properties properties = new Properties();
         properties.load(new FileReader(new File(propMail)));
         /*

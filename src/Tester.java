@@ -1,4 +1,5 @@
-import DB.ConnectionDB;
+import DB.DBWorker;
+import XML.XMLWorker;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.util.HashMap;
 public class Tester {
 
     public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
-        DB.ConnectionDB db=new ConnectionDB();
+        DBWorker db=new DBWorker();
         XMLWorker xmlWorker;
         HashMap<String,Double> over = new HashMap();
 
@@ -23,9 +24,9 @@ public class Tester {
                 over = xmlWorker.parse(file.getPath());
             }
             //записываем перерасход в базу
-            db.connect(over);
+            db.updateData(over);
         }
-        //emailSender.send("E:\\!distrib\\git\\MTS\\1.property",over);
+        //EmailWorker.emailSender.send("E:\\!distrib\\git\\MTS\\1.property",over);
 
 
 

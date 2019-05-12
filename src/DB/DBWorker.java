@@ -7,13 +7,13 @@ import java.sql.*;
 import java.util.*;
 
 
-public class ConnectionDB {
+public class DBWorker {
     static private String userName = "root";
     static  private String password = "root";
     static private String connectionUrl = "jdbc:mysql://localhost/mts?useUnicode=true&characterEncoding=UTF-8&useJDBCComplian" +
             "tTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-    public void connect(HashMap<String,Double> map) throws ClassNotFoundException, SQLException {
+    public void updateData(HashMap<String,Double> map) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         try (Connection connection = DriverManager.getConnection(connectionUrl, userName, password)) {
             Statement statement=connection.createStatement();
@@ -66,7 +66,7 @@ public class ConnectionDB {
             e.printStackTrace();
         }
     }
-    public static void monthlyReport() throws ClassNotFoundException, SQLException, IOException {
+    private static void monthlyReport() throws ClassNotFoundException, SQLException, IOException {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         try (Connection connection = DriverManager.getConnection(connectionUrl, userName, password)) {
@@ -74,14 +74,14 @@ public class ConnectionDB {
             Statement statement = connection.createStatement();
             ResultSet resultSet=statement.executeQuery("SELECT * from overruns where overrun is not null");
 
-            OutFile outFile=new OutFile();
-            outFile.write(resultSet);
+            MonthlyReportTxt monthlyReportTxt=new MonthlyReportTxt();
+            monthlyReportTxt.write(resultSet);
 
         }
     }
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
-        dropAndCreate();
-        //monthlyReport();
+        //dropAndCreate();
+        monthlyReport();
     }
     /*
 

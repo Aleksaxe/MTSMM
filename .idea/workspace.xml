@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="897b5490-ff21-4b80-aba8-b73c78056d3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/DB/ConnectionDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTSMM/DB/ConnectionDB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MTSMM/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MTSMM/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/outFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DB/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/ConnectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/XMLWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/emailSender$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MTSMM/emailSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DB/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/DBWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DB/OutFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/MonthlyReportTxt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XMLWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/outFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/OutFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XMLWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/XMLWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmailWorker/emailSender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,17 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DB/ConnectionDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -101,6 +94,8 @@
         <option value="$PROJECT_DIR$/src/XMLWorker.java" />
         <option value="$PROJECT_DIR$/src/Tester.java" />
         <option value="$PROJECT_DIR$/src/DB/ConnectionDB.java" />
+        <option value="$PROJECT_DIR$/src/DB/MonthlyReportTxt.java" />
+        <option value="$PROJECT_DIR$/src/DB/DBWorker.java" />
       </list>
     </option>
   </component>
@@ -127,12 +122,6 @@
               <item name="MTSMM" type="b2602c69:ProjectViewProjectNode" />
               <item name="MTSMM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTSMM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTSMM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -169,9 +158,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Tester">
-    <configuration name="ConnectionDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DB.ConnectionDB" />
+  <component name="RunManager">
+    <configuration name="DBWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DB.DBWorker" />
       <module name="MTSMM" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -193,7 +182,7 @@
       </method>
     </configuration>
     <configuration name="XMLWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="XMLWorker" />
+      <option name="MAIN_CLASS_NAME" value="XML.XMLWorker" />
       <module name="MTSMM" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -225,12 +214,12 @@
     <list>
       <item itemvalue="Application.XMLWorker" />
       <item itemvalue="Application.Tester" />
-      <item itemvalue="Application.ConnectionDB" />
+      <item itemvalue="Application.DBWorker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DBWorker" />
         <item itemvalue="Application.Tester" />
-        <item itemvalue="Application.ConnectionDB" />
         <item itemvalue="Application.XMLWorker" />
       </list>
     </recent_temporary>
@@ -249,18 +238,18 @@
       <workItem from="1557156898006" duration="5936000" />
       <workItem from="1557203526617" duration="2496000" />
       <workItem from="1557403668572" duration="12000" />
-      <workItem from="1557548610407" duration="24649000" />
+      <workItem from="1557548610407" duration="25420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41703000" />
+    <option name="totallyTimeSpent" value="42474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -269,15 +258,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -319,46 +308,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emailSender.java">
+    <entry file="file://$PROJECT_DIR$/src/EmailWorker/emailSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
-          <folding>
-            <element signature="e#798#1029#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/OutFile.java">
+    <entry file="file://$PROJECT_DIR$/src/XML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XMLWorker.java">
+    <entry file="file://$PROJECT_DIR$/src/XML/XMLWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="99" column="32" lean-forward="true" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
             <element signature="method#setNumber#0;class#XMLWorker#0" />
-            <element signature="class#875:2339" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/ConnectionDB.java">
+    <entry file="file://$PROJECT_DIR$/src/DB/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="1292">
+          <caret line="76" column="69" lean-forward="true" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/MonthlyReportTxt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
