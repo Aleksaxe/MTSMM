@@ -99,7 +99,7 @@ class XMLWorker {
         } catch (SAXException | IOException e) {
             e.printStackTrace();
         }
-        HashMap map = new HashMap();
+        HashMap<String, Double> map = new HashMap();
         for (int i = 0; i < numbers.size(); i++) {
             double d = overruns.get(i);
             if (d != 0.0) map.put(numbers.get(i), overruns.get(i));
