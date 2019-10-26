@@ -28,9 +28,19 @@ public class Tester {
                 db.updateData(xmlWorker.parse(file.getPath()));
             }
         }
-
+        //отчет в txt
         monthlyReport();
-        //EmailWorker.emailSender.send("E:\\!distrib\\git\\MTS\\email.property",over);
+        /*
+
+         */
+        /*todo
+        рассылает имейлы сотрудникам допустившим перерасход,
+        первым параметром карта с имейлами сотрудников
+        вторым список сотрудников с перерасходом за месяц
+
+        EmailWorker.emailSender.send("E:\\!distrib\\git\\MTS\\email.property",over);
+         */
+
 
 
     }

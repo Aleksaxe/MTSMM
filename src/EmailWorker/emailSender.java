@@ -62,12 +62,15 @@ public class emailSender {
         Properties senderProp=new Properties();
        senderProp.load(new FileReader(new File("E:\\!distrib\\git\\MTS\\sender.property")));
 
-
         /*
          * foreach по карте over для отправки мейлов
+         * в карте over в качестве ключа имейлы получателей
+         * в качестве значения перерасход
+         * в "email" записывается мейл получателя
          * */
         over.forEach((key, value) -> {
-            String email = properties.getProperty((String) key) + "@multi-menu.com";
+            String email = properties.getProperty((String) key);
+            //ящик и пароль от ящика отправителя берутся из проп
             emailSender.messegePreparation(senderProp.getProperty("email"), senderProp.getProperty("password"), email
                     , (String) key, Double.parseDouble(value.toString()));
         });
