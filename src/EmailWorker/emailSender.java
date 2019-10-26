@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
-
 public class emailSender {
 
     private static void messegePreparation(String email, String password, String addressee, String numberWithOverrun, double overrun) {
@@ -44,7 +43,7 @@ public class emailSender {
                     " \n" +
                     "Сформировать Служебную записку, объясняющую данный перерасход " +
                     "(бланк можно найти по следующему пути : Shared\\Общая\\Документы IT)" +
-                    " и согласовать её с Финансовым директором, Тверских Р.В.\n" +
+                    " и согласовать её с Финансовым директором, Щербитской Н.\n" +
                     "Направить, согласованную Служебную записку Руководителю расчетной группы Елене Мамичевой.\n" +
                     "\n" +
                     "В противном случае, допущенный Вами перерасход будет удержан из Вашей заработной платы.");
@@ -56,15 +55,20 @@ public class emailSender {
             throw new RuntimeException(e);
         }
     }
+
    public static void send(String propMail, HashMap over) throws IOException {
         Properties properties = new Properties();
         properties.load(new FileReader(new File(propMail)));
+        Properties senderProp=new Properties();
+       senderProp.load(new FileReader(new File("E:\\!distrib\\git\\MTS\\sender.property")));
+
+
         /*
          * foreach по карте over для отправки мейлов
          * */
         over.forEach((key, value) -> {
             String email = properties.getProperty((String) key) + "@multi-menu.com";
-            emailSender.messegePreparation("support@multi-menu.net", "Vfhcbfybyyfkeyt18", email
+            emailSender.messegePreparation(senderProp.getProperty("email"), senderProp.getProperty("password"), email
                     , (String) key, Double.parseDouble(value.toString()));
         });
     }

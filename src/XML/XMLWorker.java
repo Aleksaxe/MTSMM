@@ -69,10 +69,12 @@ public class XMLWorker {
                 for (int i = 0; i < attributes.getLength(); i++) {
                     if (attributes.getValue(i).equalsIgnoreCase("телефонные услуги")
                             && !attributes.getValue(i).equalsIgnoreCase("0")) {
+                        //pass the tag attributes to the method for further selection of attribute values
                         addOverrun(attributes);
                     } else if (attributes.getValue(i).equalsIgnoreCase("разовые услуги")
                             && !attributes.getValue(i).equalsIgnoreCase("0")) {
                         addOverrun(attributes);
+
                     }
 
                 }
